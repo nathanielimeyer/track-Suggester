@@ -52,7 +52,7 @@ $(document).ready(function(){
       var answer5 = $("#answer5").val();
       $("#question5").hide();
       $(".response5").text(answer5);
-      $(".suggestedTrack").show();
+      $("#suggestedTrack").show();
       event.preventDefault();
     });
 });
