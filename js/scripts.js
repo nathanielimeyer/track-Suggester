@@ -21,6 +21,14 @@ $(document).ready(function(){
       $("#question1").hide();
       $("#question2").show();
       $(".companyType").text(answer1);
+      event.preventDefault();
+    });
+
+    $("#question2").submit(function(event){
+      var answer2 = $("#answer2").val();
+      $("#question2").hide();
+      $("#question3").show();
+      $(".productType").text(answer2);
       $(".suggestedTrack").show();
       event.preventDefault();
     });
