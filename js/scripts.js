@@ -29,12 +29,30 @@ $(document).ready(function(){
       $("#question2").hide();
       $("#question3").show();
       $(".productType").text(answer2);
-      $(".suggestedTrack").show();
       event.preventDefault();
     });
 
-// Put in last question form
-//     $(".suggestedTrack").show();
+    $("#question3").submit(function(event){
+      var answer3 = $("#answer3").val();
+      $("#question3").hide();
+      $("#question4").show();
+      $(".response3").text(answer3);
+      event.preventDefault();
+    });
 
+    $("#question4").submit(function(event){
+      var answer4 = $("#answer4").val();
+      $("#question4").hide();
+      $("#question5").show();
+      $(".response4").text(answer4);
+      event.preventDefault();
+    });
 
+    $("#question5").submit(function(event){
+      var answer5 = $("#answer5").val();
+      $("#question5").hide();
+      $(".response5").text(answer5);
+      $(".suggestedTrack").show();
+      event.preventDefault();
+    });
 });
