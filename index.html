@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Which programming language should you learn?</title>
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.1.1.js"></script>
@@ -10,20 +10,24 @@
   </head>
   <body>
     <div class="container">
-      <h1></h1>
+      <h1>Which programming language should you learn?</h1>
+
       <form id="nameForm">
+        <p>Unsure which programming language to study? We can help you decide with this short questionnaire.</p>
         <div class="form-group">
-          <h2>Let's start with your name.</h2>
+          <p>Please start by telling us your name.</p>
           <label for="name">Name</label>
           <input id="name" class="form-control" type="text">
           <p id="nameOutput">You must enter your name to proceed.</p>
         </div>
         <br>
         <button type="submit" class="btn">Submit</button>
-        <div>
-          <p class="suggestedTrack">Here is a suggestion.</p>
-        </div>
       </form>
+
+      <div>
+        <p class="suggestedTrack">Here is a suggestion, <span class="echoName"></span>.</p>
+      </div>
+
     </div>
   </body>
 </html>
