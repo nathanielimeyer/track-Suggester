@@ -1,6 +1,20 @@
 $(document).ready(function(){
   var nameInput = "";
+  var aCount = 0;
+  var bCount = 0;
+  var cCount = 0;
+
   $("#nameForm").show();
+
+  function responseCounter(answer){
+    if (answer === "A") {
+      aCount++
+    } else if (answer === "B") {
+      bCount++
+    } else {
+      cCount++
+    }
+  }
 
   $("#nameForm").submit(function(event){
     nameInput = $("input#name").val();
@@ -14,45 +28,48 @@ $(document).ready(function(){
       $("#question1").show();
     }
     event.preventDefault();
-  });
+  })
 
   $("#question1").submit(function(event){
     var answer1 = $("#answer1").val();
+    responseCounter(answer1);
     $("#question1").hide();
     $("#question2").show();
-    $(".companyType").text(answer1);
     event.preventDefault();
-  });
+  })
 
   $("#question2").submit(function(event){
     var answer2 = $("#answer2").val();
+    responseCounter(answer2);
     $("#question2").hide();
     $("#question3").show();
-    $(".productType").text(answer2);
     event.preventDefault();
-  });
+  })
 
   $("#question3").submit(function(event){
     var answer3 = $("#answer3").val();
+    responseCounter(answer3);
     $("#question3").hide();
     $("#question4").show();
-    $(".response3").text(answer3);
     event.preventDefault();
-  });
+  })
 
   $("#question4").submit(function(event){
     var answer4 = $("#answer4").val();
+    responseCounter(answer4);
     $("#question4").hide();
     $("#question5").show();
-    $(".response4").text(answer4);
     event.preventDefault();
-  });
+  })
 
   $("#question5").submit(function(event){
     var answer5 = $("#answer5").val();
+    responseCounter(answer5);
     $("#question5").hide();
-    $(".response5").text(answer5);
+    $(".showACount").text(aCount);
+    $(".showBCount").text(bCount);
+    $(".showCCount").text(cCount);
     $("#suggestedTrack").show();
     event.preventDefault();
-  });
+  })
 });
