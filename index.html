@@ -19,57 +19,67 @@
           <label for="name">Name</label>
           <input id="name" class="form-control" type="text">
           <p id="nameOutput">You must enter your name to proceed.</p>
+          <label for="email">Email:</label>
+          <input id="email" class="form-control "type="text">
         </div>
         <br>
         <button type="submit" class="btn">Next</button>
       </form>
 
       <form class="well" id="question1">
-        <p>What kind of company do you want to work for, <span class="echoName"></span>?</p>
+        <p>How important are health insurance and benefits to you, <span class="echoName"></span>?</p>
         <select class="form-control" id="answer1">
-          <option value="startUp">Start up.</option>
-          <option value="oldCorp">Big old company.</option>
+          <option value="A">Not at all important.</option>
+          <option value="B">Pretty important.</option>
+          <option value="C">I'm extremely risk averse. This is a deal breaker for me.</option>
         </select>
         <br>
         <button type="submit" class="btn">Next</button>
       </form>
 
       <form class="well" id="question2">
-        <p>What kind of projects do you want to work on, <span class="echoName"></span>?</p>
+        <p>What kind of company do you  want to work for, <span class="echoName"></span>?</p>
+        <p>At a start up you may exchange financial compensation for stock options which may or may not someday be worth something. The culture is very relaxed. They may have beer taps right in the office and even tolerate the reek of pot smoke when you clock in at 10am. Provided you stick around until 10pm.</p>
+        <p>A midsize company can still be pretty fun to work for but slackers get weeded out pretty carefully. They provide fairly generous financial compensation and if they're not too close to IPO you might get decent stock options or an employee stock purchase plan. But the IPO is not going to make you a millionaire.</p>
+        <p>An old company is not very fun to work at. They'll act shocked if you have one beer at lunch but at least you can get pretty hammered at the Holiday Party. Compensation will be pretty stingy unless you're badly needed, but pension and benefits are usually fantastic.</p>
         <select class="form-control" id="answer2">
-          <option value="mobile">Mobile apps</option>
-          <option value="webPages">Web pages</option>
-          <option value="business">Business software</option>
+          <option value="A">A start-up.</option>
+          <option value="B">A growing company.</option>
+          <option value="C">A venerable company.</option>
         </select>
         <br>
         <button type="submit" class="btn">Next</button>
       </form>
 
+
       <form class="well" id="question3">
-        <p>Question 3, <span class="echoName"></span>?</p>
+        <p>What kind of projects do you want to work on, <span class="echoName"></span>?</p>
         <select class="form-control" id="answer3">
-          <option value="q3Option1">Option1</option>
-          <option value="q3Option2">Option2</option>
+          <option value="A">Web pages</option>
+          <option value="B">Mobile or desktop apps</option>
+          <option value="C">Business software</option>
         </select>
         <br>
         <button type="submit" class="btn">Next</button>
       </form>
 
       <form class="well" id="question4">
-        <p>Question 4, <span class="echoName"></span>?</p>
+        <p><span class="echoName"></span>, what kind of jeans do you wear?</p>
         <select class="form-control" id="answer4">
-          <option value="q4Option1">Optio  n1</option>
-          <option value="q4Option2">Op tion2</option>
+          <option value="A">Skinny Jeans.</option>
+          <option value="B">Levi's 501s. Timeless.</option>
+          <option value="C">Chinos. You know, to match my polo shirts.</option>
         </select>
         <br>
         <button type="submit" class="btn">Next</button>
       </form>
 
       <form class="well" id="question5">
-        <p>Question 5, <span class="echoName"></span>?</p>
+        <p>How 1337 are you, <span class="echoName"></span>?</p>
         <select class="form-control" id="answer5">
-          <option value="q5Option1">O ption1</option>
-          <option value="q5Option2">Optio   n2</option>
+          <option value="A">1337 4s phuX0r</option>
+          <option value="B">ph34r m3</option>
+          <option value="C">What?</option>
         </select>
         <br>
         <button type="submit" class="btn">Next</button>
