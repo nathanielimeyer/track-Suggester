@@ -16,6 +16,40 @@ $(document).ready(function(){
     }
   }
 
+  function finalSuggestion(){
+    if (aCount > bCount && aCount > cCount) {
+      $(".winner").text("PHP or web design");
+      $(".winningOption").text("first option");
+      $(".winningOptionCount").text(aCount);
+      $(".companyType").text("a startup or mom and pop website company");
+      $(".productType").text("depressing little web pages");
+      $(".feeling").text("miserable");
+      $("#clearWinner").show();
+    } else if (bCount > aCount && bCount > cCount) {
+      $(".winner").text("JAVA");
+      $(".winningOption").text("second option");
+      $(".winningOptionCount").text(bCount);
+      $(".companyType").text("a midsize company");
+      $(".productType").text("cool mobile or desktop applications");
+      $(".feeling").text("awesome");
+      $("#clearWinner").show();
+    } else if (cCount > bCount && cCount > aCount) {
+      $(".winner").text("C# and .NET");
+      $(".winningOption").text("third option");
+      $(".winningOptionCount").text(bCount);
+      $(".companyType").text("an uptight old company with a stifling culture");
+      $(".productType").text("boring business applications");
+      $(".feeling").text("miserable");
+      $("#clearWinner").show();
+    } else {
+      // 2 options tied
+    }
+
+    $(".showACount").text(aCount);
+    $(".showBCount").text(bCount);
+    $(".showCCount").text(cCount);
+  }
+
   $("#nameForm").submit(function(event){
     nameInput = $("input#name").val();
     if (!nameInput) {
@@ -66,10 +100,7 @@ $(document).ready(function(){
     var answer5 = $("#answer5").val();
     responseCounter(answer5);
     $("#question5").hide();
-    $(".showACount").text(aCount);
-    $(".showBCount").text(bCount);
-    $(".showCCount").text(cCount);
-    $("#suggestedTrack").show();
+    finalSuggestion();
     event.preventDefault();
   })
 });
