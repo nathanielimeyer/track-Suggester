@@ -54,7 +54,6 @@ $(document).ready(function(){
       $(".winningOption").text("option B and C");
       $("#responsesTied").show();
     }
-
   }
 
   $("#nameForm").submit(function(event){
@@ -108,6 +107,18 @@ $(document).ready(function(){
     responseCounter(answer5);
     $("#question5").hide();
     finalSuggestion();
+    $("#reset").show();
     event.preventDefault();
   })
+
+  $("#reset").submit(function(event){
+    nameInput = "";
+    aCount = 0;
+    bCount = 0;
+    cCount = 0;
+    $("#clearWinner, #nameOutput, #responsesTied, form").hide();
+    $("#nameForm").show();
+    event.preventDefault();
+  })
+
 });
