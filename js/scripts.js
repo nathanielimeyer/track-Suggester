@@ -21,12 +21,12 @@ $(document).ready(function(){
       $(".winner").text("PHP or web design");
       $(".winningOption").text("first option");
       $(".winningOptionCount").text(aCount);
-      $(".companyType").text("a startup or mom and pop website company");
+      $(".companyType").text("a startup or a mom and pop website company");
       $(".productType").text("depressing little web pages");
       $(".feeling").text("miserable");
       $("#clearWinner").show();
     } else if (bCount > aCount && bCount > cCount) {
-      $(".winner").text("JAVA");
+      $(".winner").text("Java");
       $(".winningOption").text("second option");
       $(".winningOptionCount").text(bCount);
       $(".companyType").text("a midsize company");
@@ -41,13 +41,20 @@ $(document).ready(function(){
       $(".productType").text("boring business applications");
       $(".feeling").text("miserable");
       $("#clearWinner").show();
-    } else {
-      // 2 options tied
+    } else if (aCount === bCount) {
+      $(".winner").text("php or Java");
+      $(".winningOption").text("option A and B");
+      $("#responsesTied").show();
+    }  else if (aCount === cCount) {
+      $(".winner").text("php or C#");
+      $(".winningOption").text("option A and C");
+      $("#responsesTied").show();
+    }  else {
+      $(".winner").text("Java or C#");
+      $(".winningOption").text("option B and C");
+      $("#responsesTied").show();
     }
 
-    $(".showACount").text(aCount);
-    $(".showBCount").text(bCount);
-    $(".showCCount").text(cCount);
   }
 
   $("#nameForm").submit(function(event){
