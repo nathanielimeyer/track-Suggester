@@ -24,7 +24,7 @@ _nathanielimeyer@gmail.com_
 
 ## Technologies Used
 
-_This web page uses HTML, CSS, Bootstrap, and JPG encoded images._
+_This web page uses HTML, CSS, and Bootstrap._
 
 ### License
 
